@@ -6,7 +6,7 @@ const urlApi = "https://api.rawg.io/api/";
 const getVideogameApi = async () => {
   const dataApi = []; 
   let pag = 1;
-  while (pag <= 3) { 
+  while (pag <= 10) { 
     const urlOfApi = await axios.get(`${urlApi}games?key=${API_KEY}&page=${pag}`);
     const getDataApi = urlOfApi.data.results.map(vg => {
       const allData = {
