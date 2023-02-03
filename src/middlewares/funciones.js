@@ -7,7 +7,7 @@ const getVideogameApi = async () => {
   const dataApi = []; 
   let pag = 1;
   while (pag <= 3) { 
-    const urlOfApi = await axios.get(`${urlApi}games?key=${API_KEY}&page=${pag}&page_size=40`);
+    const urlOfApi = await axios.get(`${urlApi}games?key=${API_KEY}&page=${pag}`);
     const getDataApi = urlOfApi.data.results.map(vg => {
       const allData = {
         id: vg.id, 
